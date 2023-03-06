@@ -262,6 +262,7 @@
   justify-self: end;
   display: flex;
   align-items: center;
+  margin-right: 15px;
 }
 .content .header .profil .foto {
   width: 50px;
@@ -271,10 +272,15 @@
   border-radius: 50%;
   margin-right: 10px;
   display: flex;
+  padding: 3px;
 }
 .content .header .profil .foto img {
-  border-radius: 50%;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
+  border-radius: 50%;
+  align-self: center;
+  justify-self: center;
 }
 .content .header .profil .akun {
   font-weight: bold;
@@ -316,7 +322,6 @@
   background-color: white;
   border-radius: 15px;
   box-shadow: 2px 2px 0px #9d9d9d;
-  padding: 10px;
   cursor: pointer;
   transition: 0.7s;
 }
@@ -324,17 +329,19 @@
   background-image: url(../assets/unggah.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   justify-self: center;
+  align-self: center;
   transition: 0.7s;
 }
 .content .child .child-dash .notif .unggah .text {
   color: #0054a3;
   font-weight: bold;
   justify-self: center;
-  align-self: center;
+  align-self: flex-start;
   transition: 0.7s;
+  font-size: medium;
 }
 .content .child .child-dash .notif .unggah:hover {
   background-color: #0054a3;
@@ -375,7 +382,17 @@
     grid-template-rows: 70px 3fr 1fr;
   }
   .content .child .child-dash .notif .unggah {
-    display: flex;
+    display: grid;
+    grid-template-columns: 45px auto;
+  }
+  .content .child .child-dash .notif .unggah .icon {
+    width: 30px;
+    height: 30px;
+    justify-self: end;
+  }
+  .content .child .child-dash .notif .unggah .text {
+    font-size: small;
+    align-self: center;
   }
   .sidebar .title .img {
     width: 90%;

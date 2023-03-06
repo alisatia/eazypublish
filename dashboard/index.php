@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+if( !isset($_SESSION["id_user"]) ) {
+	header("Location: ../../");
+	exit;
+}
+
+require '../conn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,9 +70,9 @@
                 </div>
                 <div class="profil">
                     <div class="foto">
-                        <img src="../assets/booky.png" alt="">
+                        <img src="../files/<?php echo $dbpenulis['file_foto'] ?>" alt="">
                     </div>
-                    <div class="akun">Ahmad Ali Satia, S.Kom.</div>
+                    <div class="akun"><?php echo $dbuser['username'] ?></div>
                 </div>
             </div>
             <div id="child" class="child">
@@ -98,7 +108,62 @@
                 </div>
                 <div id="child-naskah">
                     <div id="kategori"></div>
-                    <div id="buku"></div>
+                    <div id="buku">
+                        <div id="kate">
+                            <div id="kates">Matematika</div>
+                            <div id="liness"></div>
+                            <div id="next">
+                                <div id="pref"><</div>
+                                <div id="nom">1</div>
+                                <div id="nex">></div>
+                            </div>
+                        </div>
+                        <div id="boke">
+                            <div id="boxbook">
+                                <img src="../files/cover.jpg" alt="">
+                                <div id="bookjudul">Bikin Mobil</div>
+                                <div id="bookpenulis">Ali</div>
+                            </div>
+                            <div id="lines"></div>
+                            <div id="boxbook">
+                                <img src="../files/cover.jpg" alt="">
+                                <div id="bookjudul">Bikin Mobil</div>
+                                <div id="bookpenulis">Ali</div>
+                            </div>
+                            <div id="lines"></div>
+                            <div id="boxbook">
+                                <img src="../files/cover.jpg" alt="">
+                                <div id="bookjudul">Bikin Mobil</div>
+                                <div id="bookpenulis">Ali</div>
+                            </div>
+                            <div id="lines"></div>
+                            <div id="boxbook">
+                                <img src="../files/cover.jpg" alt="">
+                                <div id="bookjudul">Bikin Mobil</div>
+                                <div id="bookpenulis">Ali</div>
+                            </div>
+                            <div id="lines"></div>
+                            <div id="boxbook">
+                                <img src="../files/cover.jpg" alt="">
+                                <div id="bookjudul">Bikin Mobil</div>
+                                <div id="bookpenulis">Ali</div>
+                            </div>
+                            <div id="liness"></div>
+                            <div id="liness"></div>
+                            <div id="liness"></div>
+                            <div id="liness"></div>
+                            <div id="liness"></div>
+                            <div id="liness"></div>
+                            <div id="liness"></div>
+                            <div id="liness"></div>
+                            <div id="liness"></div>
+                            <div id="boxbook">
+                                <img src="../files/cover.jpg" alt="">
+                                <div id="bookjudul">Bikin Mobil</div>
+                                <div id="bookpenulis">Ali</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div id="child-guidelines">
                     <div id="struktur">

@@ -100,8 +100,87 @@
   background-color: white;
   border-radius: 15px;
   box-shadow: 2px 2px 0px #9d9d9d;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
 }
-
+#child-naskah #buku #boke{
+  width: 95%;
+  height: 95%;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 1px 1fr);
+  grid-template-rows: 1fr 25px 1fr;
+}
+#child-naskah #buku #boke #boxbook{
+  width: 150px;
+  height: 270px;
+  display: grid;
+  grid-template-rows: auto 15px 15px;
+  row-gap: 3px;
+  justify-self: center;
+}
+#child-naskah #buku #boke #boxbook img{
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  align-self: center;
+}
+#child-naskah #buku #boke #boxbook #bookjudul{
+  font-size: small;
+  font-weight: bold;
+}
+#child-naskah #buku #boke #boxbook #bookpenulis{
+  font-size: small;
+}
+#child-naskah #buku #boke #lines{
+  box-sizing: border-box;
+  border-right: 1px solid #9d9d9d;
+  height: 75%;
+}
+#child-naskah #buku #boke #liness{
+  box-sizing: border-box;
+  border-top: 1px solid #9d9d9d;
+  width: 100%;
+  align-self: center;
+}
+#child-naskah #buku #kate{
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: auto 1fr 150px;
+  width: 95%;
+  column-gap: 15px;
+  justify-self: center;
+}
+#child-naskah #buku #kate #kates{
+  font-weight: bold;
+  font-size: medium;
+  color: #0054a3;
+  align-self: center;
+  justify-self: flex-start;
+}
+#child-naskah #buku #kate #liness{
+  box-sizing: border-box;
+  border-top: 1px solid #9d9d9d;
+  width: 100%;
+  align-self: center;
+}
+#child-naskah #buku #kate #next{
+  display: grid;
+  grid-template-columns: 30px auto 30px;
+}
+#child-naskah #buku #kate #next #pref{
+  align-self: center;
+  justify-self: center;
+}
+#child-naskah #buku #kate #next #nom{
+  align-self: center;
+  justify-self: center;
+}
+#child-naskah #buku #kate #next #nex{
+  align-self: center;
+  justify-self: center;
+}
 #child-guidelines {
   width: 100%;
   height: 100%;
@@ -177,6 +256,13 @@
   }
   #child-naskah {
     grid-template-columns: 200px 1fr;
+  }
+  #child-naskah #buku #boke #boxbook{
+    width: 130px;
+    height: 190px;
+  }
+  #child-naskah #buku #boke #boxbook img{
+    border-radius: 8px;
   }
   #child-guidelines #struktur #logo {
     height: 70px;
