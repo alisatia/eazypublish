@@ -1,0 +1,423 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+/* contaienr */
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 250px 5fr 20px;
+  grid-template-rows: 20px auto 20px;
+  grid-template-areas:
+    "side blank1 blank2"
+    "side content blank2"
+    "side blank3 blank2";
+}
+.blank1 {
+  grid-area: blank1;
+}
+.blank2 {
+  grid-area: blank2;
+}
+.blank3 {
+  grid-area: blank3;
+}
+/* sidebar */
+.sidebar {
+  grid-area: side;
+  background-color: white;
+  background-image: url(../assets/sidebar.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 130px auto;
+  padding-left: 70px;
+}
+.sidebar .title {
+  display: grid;
+}
+.sidebar .title .img {
+  width: 90%;
+  height: 40%;
+  background-image: url(../assets/itbpress.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  justify-self: start;
+  align-self: center;
+}
+.sidebar .nav {
+  display: grid;
+  grid-template-rows: 30px 120px;
+  transition: 0.7s;
+}
+.sidebar .nav .slide {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 30px 60px 30px;
+  background-color: #e9ecf8;
+  margin-left: 15px;
+  transition: 0.7s;
+}
+.sidebar .nav .slide .satu {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 0 0 15px 0;
+}
+.sidebar .nav .slide .dua {
+  box-sizing: border-box;
+  border-radius: 15px 0 0 15px;
+}
+.sidebar .nav .slide .xdua {
+  box-sizing: border-box;
+  border-radius: 15px 0 0 15px;
+  background-color: black;
+  position: absolute;
+  height: 60px;
+  width: 180px;
+  margin-left: -15px;
+  margin-top: 30px;
+  background-color: #e9ecf8;
+  transition: 0.7s;
+}
+.sidebar .nav .slide .tiga {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 0 15px 0 0;
+}
+.sidebar .nav .dashboard {
+  box-sizing: border-box;
+  height: 60px;
+  width: 180px;
+  position: absolute;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 30px 150px;
+}
+.sidebar .nav .dashboard .icon {
+  background-image: url(../assets/xdashboard.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.sidebar .nav .dashboard .text {
+  justify-self: start;
+  align-self: center;
+  margin-left: 30px;
+  font-size: medium;
+  color: #0054a3;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.sidebar .nav .biaya {
+  box-sizing: border-box;
+  height: 60px;
+  width: 180px;
+  position: absolute;
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 30px 150px;
+}
+.sidebar .nav .biaya .icon {
+  background-image: url(../assets/biaya.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.sidebar .nav .biaya .text {
+  justify-self: start;
+  align-self: center;
+  margin-left: 30px;
+  font-size: small;
+  color: #9d9d9d;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.sidebar .nav .status {
+  box-sizing: border-box;
+  height: 60px;
+  width: 180px;
+  position: absolute;
+  margin-top: 180px;
+  display: grid;
+  grid-template-columns: 30px 150px;
+}
+.sidebar .nav .status .icon {
+  background-image: url(../assets/status.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.sidebar .nav .status .text {
+  justify-self: start;
+  align-self: center;
+  margin-left: 30px;
+  font-size: small;
+  color: #9d9d9d;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.sidebar .nav .naskah {
+  box-sizing: border-box;
+  height: 60px;
+  width: 180px;
+  position: absolute;
+  margin-top: 240px;
+  display: grid;
+  grid-template-columns: 30px 150px;
+}
+.sidebar .nav .naskah .icon {
+  background-image: url(../assets/naskah.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.sidebar .nav .naskah .text {
+  justify-self: start;
+  align-self: center;
+  margin-left: 30px;
+  font-size: small;
+  color: #9d9d9d;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.sidebar .nav .guidelines {
+  box-sizing: border-box;
+  height: 60px;
+  width: 180px;
+  position: absolute;
+  margin-top: 300px;
+  display: grid;
+  grid-template-columns: 30px 150px;
+}
+.sidebar .nav .guidelines .icon {
+  background-image: url(../assets/guidelines.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.sidebar .nav .guidelines .text {
+  justify-self: start;
+  align-self: center;
+  margin-left: 30px;
+  font-size: small;
+  color: #9d9d9d;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.7s;
+}
+/* content */
+.content {
+  grid-area: content;
+  background-color: #e9ecf8;
+  border-radius: 50px 10px 10px 50px;
+  display: grid;
+  grid-template-rows: 50px auto;
+  padding: 50px;
+  row-gap: 25px;
+}
+.content .header {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.content .header .tanggal {
+  font-size: medium;
+  font-weight: bold;
+  display: grid;
+  align-self: center;
+}
+.content .header .profil {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+.content .header .profil .foto {
+  width: 50px;
+  height: 50px;
+  border: #0054a3 3px solid;
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: flex;
+}
+.content .header .profil .foto img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+.content .header .profil .akun {
+  font-weight: bold;
+}
+
+.content .child {
+  box-sizing: border-box;
+  transition: 0.7s;
+}
+.content .child .child-dash {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 100px 3fr 1fr;
+  row-gap: 15px;
+}
+.content .child .child-dash .notif {
+  display: grid;
+  grid-template-columns: auto 15% 150px;
+  column-gap: 15px;
+}
+.content .child .child-dash .notif .indikator {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 0px #9d9d9d;
+}
+.content .child .child-dash .notif .none {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 0px #9d9d9d;
+}
+.content .child .child-dash .notif .unggah {
+  text-decoration: none;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 60px auto;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 0px #9d9d9d;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.content .child .child-dash .notif .unggah .icon {
+  background-image: url(../assets/unggah.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 50px;
+  height: 50px;
+  justify-self: center;
+  transition: 0.7s;
+}
+.content .child .child-dash .notif .unggah .text {
+  color: #0054a3;
+  font-weight: bold;
+  justify-self: center;
+  align-self: center;
+  transition: 0.7s;
+}
+.content .child .child-dash .notif .unggah:hover {
+  background-color: #0054a3;
+}
+.content .child .child-dash .notif .unggah:hover .icon {
+  background-image: url(../assets/xunggah.png);
+}
+.content .child .child-dash .notif .unggah:hover .text {
+  color: white;
+}
+.content .child .child-dash .grafik {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 0px #9d9d9d;
+}
+.content .child .child-dash .last {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 0px #9d9d9d;
+}
+
+@media only screen and (max-width: 1600px) {
+  /* resolusi 720p: */
+  .container {
+    grid-template-columns: 200px 5fr 15px;
+    grid-template-rows: 15px auto 15px;
+  }
+  .sidebar .nav .slide .xdua {
+    width: 150px;
+  }
+  .content {
+    padding: 25px;
+    row-gap: 15px;
+  }
+  .content .child .child-dash {
+    grid-template-rows: 70px 3fr 1fr;
+  }
+  .content .child .child-dash .notif .unggah {
+    display: flex;
+  }
+  .sidebar .title .img {
+    width: 90%;
+    height: 70%;
+  }
+  .sidebar {
+    grid-template-rows: 70px auto;
+    padding-left: 50px;
+  }
+  .sidebar .nav .dashboard .icon {
+    margin-left: 10px;
+  }
+  .sidebar .nav .dashboard .text {
+    margin-left: 15px;
+    font-size: small;
+  }
+  .sidebar .nav .biaya .icon {
+    margin-left: 10px;
+  }
+  .sidebar .nav .biaya .text {
+    margin-left: 15px;
+    font-size: x-small;
+  }
+  .sidebar .nav .status .icon {
+    margin-left: 10px;
+  }
+  .sidebar .nav .status .text {
+    margin-left: 15px;
+    font-size: x-small;
+  }
+  .sidebar .nav .naskah .icon {
+    margin-left: 10px;
+  }
+  .sidebar .nav .naskah .text {
+    margin-left: 15px;
+    font-size: x-small;
+  }
+  .sidebar .nav .guidelines .icon {
+    margin-left: 10px;
+  }
+  .sidebar .nav .guidelines .text {
+    margin-left: 15px;
+    font-size: x-small;
+  }
+}
