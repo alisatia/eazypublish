@@ -22,5 +22,10 @@ $dbpenulis = mysqli_fetch_array($datapenulis);
 // database buku
 $idpenulis = $dbpenulis['id_penulis'];
 $dbnbuku = mysqli_query($conn, "SELECT * FROM buku WHERE id_penulis = '$idpenulis'");
+$dbstatus = mysqli_query($conn, "SELECT * FROM buku WHERE id_penulis = '$idpenulis' ");
+// $dbstatus = mysqli_query($conn, "SELECT * FROM buku WHERE id_penulis = '$idpenulis' AND NOT status = 'Publish'");
+
+//database buku done
+$dbbukudone = mysqli_query($conn, "SELECT * FROM buku_done WHERE id_penulis = '$idpenulis' LIMIT 10");
 
 ?>

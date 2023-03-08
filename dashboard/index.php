@@ -15,6 +15,7 @@ require '../conn.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animasi.css">
     <link rel="stylesheet" href="react.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <title>Dashboard</title>
@@ -78,7 +79,38 @@ require '../conn.php';
             <div id="child" class="child">
                 <div id="child-dash" class="child-dash">
                     <div class="notif">
-                        <div class="indikator"></div>
+                        <div class="indikator">
+                            <div id="boxindikatr">
+                                <div id="dsreview">
+                                    <div id="icon"></div>
+                                    <div id="text">
+                                        <p>1</p>
+                                        <p>Review</p>
+                                    </div>
+                                </div>
+                                <div id="dsproses">
+                                    <div id="icon"></div>
+                                    <div id="text">
+                                        <p>1</p>
+                                        <p>Proses</p>
+                                    </div>
+                                </div>
+                                <div id="dsdone">
+                                    <div id="icon"></div>
+                                    <div id="text">
+                                        <p>1</p>
+                                        <p>Done</p>
+                                    </div>
+                                </div>
+                                <div id="dsrej">
+                                    <div id="icon"></div>
+                                    <div id="text">
+                                        <p>1</p>
+                                        <p>Rejected</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="none"></div>
                         <a href="../unggah/" class="unggah">
                             <div class="icon"></div>
@@ -98,19 +130,156 @@ require '../conn.php';
                 </div>
                 <div id="child-status">
                     <div id="bar">
-                        <div id="barjudul"></div>
+                        <div id="barjudul">
+                            <select name="" id="barbar" onchange="seljud()">
+                                <?php
+                                $iss = 1;
+                                while($judop = mysqli_fetch_array($dbstatus)) { 
+                                $judstat = $judop['status'];
+                                if($iss == 1) { 
+                                    $diss = $judstat;   
+                                    $iss++;
+                                 } ?> 
+                                    <option id="judop" value="<?php echo $judstat ?>"><?php echo $judop['judul'] ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
                         <div id="riwayat"></div>
                     </div>
                     <div id="anime">
                         <div id="barH"></div>
-                        <div id="animasi"></div>
+                        <div id="animasi">
+                            <div id="anreview" >
+                                <div class="book">
+                                    <div class="book__pg-shadow"></div>
+                                    <div class="book__pg"></div>
+                                    <div class="book__pg book__pg--2"></div>
+                                    <div class="book__pg book__pg--3"></div>
+                                    <div class="book__pg book__pg--4"></div>
+                                    <div class="book__pg book__pg--5"></div>
+                                </div>
+                                <div id="rev">
+                                    <p>Naskah Anda sedang kami review</p><br>
+                                    <p>Ditunggu ya!!</p>
+                                </div>
+                            </div>
+                            <div id="anmeet">
+                                <div id="meetone">Meeting, MoU dan Pembayaran</div>
+                                <div id="meettwo">
+                                    <p>Jadwal Meeting</p><br>
+                                    <p>Anda mendapatkan jadwal meeting pada:</p>
+                                    <div id="meetlist">
+                                        <div class="">Tanggal</div>
+                                        <div class="">:</div>
+                                        <div class="">Senin, 12 Februari 2023</div>
+                                        <div class="">Jam</div>
+                                        <div class="">:</div>
+                                        <div class="">10:00 WIB</div>
+                                        <div class="">Link Zoom</div>
+                                        <div class="">:</div>
+                                        <div class="">lkjfldksjafdsafadsaasdfdas</div>
+                                    </div>
+                                </div>
+                                <div id="meetthree">Untuk mendownload kontrak kerja sama silahkan klik <a href="download.php?file=mou.pdf">disini. </a>MoU ini ditandatangi oleh salah satu perwakilan dari penulis. MoU ditandatangani menggunakan materai Rp. 10,000, kemudian di scan dan di upload pada tombol di bawah ini.</div>
+                            </div>
+                            <div id="anmou">
+                                <div class="lds-ellipsis">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <p id="ppp">Silahkan unggah file MoU Anda</p>
+                                </div>
+                                <div id="isimou">
+                                    <form action="postmou.php" method="post" id="mouupload" enctype="multipart/form-data">
+                                        <label for="input-mou-upload" id="dropcontainer">
+                                            <span id="droptitle">Drop files here</span>
+                                            or
+                                            <input type="file" id="inputmouupload">
+                                            <input type="hidden" name="id-book" value="<?php echo $idpenulis ?>">
+                                        </label>
+                                        <button id="send" type="submit" name="send">Send</button>                                             
+                                    </form>
+                                </div> 
+                            </div>
+                            <div id="anedit">
+                                <div class="layouting">
+                                    <div class="wave"></div>
+                                    <div class="wave"></div>
+                                    <div class="wave"></div>
+                                    <div class="wave"></div>
+                                    <div class="wave"></div>
+                                    <div class="wave"></div>
+                                    <div class="wave"></div>
+                                    <div class="wave"></div>
+                                    <div class="wave"></div>
+                                    <div class="wave"></div>
+                                </div>
+                                <div id="informasi">
+                                    <p>Tim editing dan layouting kami sedang mengerjakan naskah anda!</p>
+                                    <p>Ditinggu ya! perkiraan selesai 5 hari lagi</p>
+                                </div>
+                            </div>
+                            <div id="anisbn">
+                                <div id="press">
+                                    <div>S</div>
+                                    <div>S</div>
+                                    <div>E</div>
+                                    <div>R</div>
+                                    <div>P</div>
+                                    <div class=""></div>
+                                    <div>B</div>
+                                    <div>T</div>
+                                    <div>I</div>
+                                </div>
+                                <div class="dots-bars-6"></div>
+                                <div id="informasi">
+                                    <p>ISBN dan E-ISBN anda sedang di daftarkan</p>
+                                    <p>Tunggu informasi selanjutnya!</p>
+                                </div>
+                            </div>
+                            <div id="anproduksi">
+                                <div class="produksi_cogs">
+                                    <div class='COGfirst'>
+                                        <div class='firstPart'></div>
+                                        <div class='firstPart'></div>
+                                        <div class='firstPart'></div>
+                                        <div class='firstHole'></div>
+                                    </div>
+                                    <div class='COGsecond'>
+                                        <div class='secondPart'></div>
+                                        <div class='secondPart'></div>
+                                        <div class='secondPart'></div>
+                                        <div class='secondHole'></div>
+                                    </div>
+                                    <div class='COGthird'>
+                                        <div class='thirdPart'></div>
+                                        <div class='thirdPart'></div>
+                                        <div class='thirdPart'></div>
+                                        <div class='thirdHole'></div>
+                                    </div>
+                                </div>
+                                <div id="informasi">Naskah Anda sedang kami produksi</div>
+                            </div>
+                            <div id="anrej">
+                                <div id="icon"></div>
+                                <div id="text">Maaf naskah Anda kami tolak dengan melihat beberapa pertimbangan.</div>
+                                <div id="text">Lihat penyebab penolakan naskah <a href=""> di sini</a></div>
+                            </div>
+                            <div id="andone">
+                                <div class="pesawat"></div>
+                                <div id="informasi">Naskah sudah dipublish</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="child-naskah">
-                    <div id="kategori"></div>
+                    <div id="kategori">
+                        <div></div>
+                    </div>
                     <div id="buku">
                         <div id="kate">
-                            <div id="kates">Matematika</div>
+                            <div id="kates"> Matematika</div>
                             <div id="liness"></div>
                             <div id="next">
                                 <div id="pref"><</div>
@@ -119,49 +288,47 @@ require '../conn.php';
                             </div>
                         </div>
                         <div id="boke">
-                            <div id="boxbook">
-                                <img src="../files/cover.jpg" alt="">
-                                <div id="bookjudul">Bikin Mobil</div>
-                                <div id="bookpenulis">Ali</div>
-                            </div>
-                            <div id="lines"></div>
-                            <div id="boxbook">
-                                <img src="../files/cover.jpg" alt="">
-                                <div id="bookjudul">Bikin Mobil</div>
-                                <div id="bookpenulis">Ali</div>
-                            </div>
-                            <div id="lines"></div>
-                            <div id="boxbook">
-                                <img src="../files/cover.jpg" alt="">
-                                <div id="bookjudul">Bikin Mobil</div>
-                                <div id="bookpenulis">Ali</div>
-                            </div>
-                            <div id="lines"></div>
-                            <div id="boxbook">
-                                <img src="../files/cover.jpg" alt="">
-                                <div id="bookjudul">Bikin Mobil</div>
-                                <div id="bookpenulis">Ali</div>
-                            </div>
-                            <div id="lines"></div>
-                            <div id="boxbook">
-                                <img src="../files/cover.jpg" alt="">
-                                <div id="bookjudul">Bikin Mobil</div>
-                                <div id="bookpenulis">Ali</div>
-                            </div>
-                            <div id="liness"></div>
-                            <div id="liness"></div>
-                            <div id="liness"></div>
-                            <div id="liness"></div>
-                            <div id="liness"></div>
-                            <div id="liness"></div>
-                            <div id="liness"></div>
-                            <div id="liness"></div>
-                            <div id="liness"></div>
-                            <div id="boxbook">
-                                <img src="../files/cover.jpg" alt="">
-                                <div id="bookjudul">Bikin Mobil</div>
-                                <div id="bookpenulis">Ali</div>
-                            </div>
+                            <?php
+                                $nom = 1; 
+                                while($bukudone = mysqli_fetch_array($dbbukudone)) { 
+                                    $judul = $bukudone['judul'];
+                            ?>
+                                        <div id="boxbook">
+                                            <img src="../files/cover.jpg" alt="">
+                                            <div id="bookjudul"><?php echo $judul ?></div>
+                                            <div id="bookpenulis">
+                                                <?php
+                                                    $dbbukudonejudul = mysqli_query($conn, "SELECT * FROM buku_done WHERE judul = '$judul' ");
+                                                    $dbbukudonecount = mysqli_query($conn, "SELECT COUNT(*) FROM buku_done WHERE judul = '$judul' ");
+                                                    $count = mysqli_fetch_array($dbbukudonecount);
+                                                    $num = $count['COUNT(*)'];
+                                                    while($bukudonejudul = mysqli_fetch_array($dbbukudonejudul) ) {
+                                                        echo $bukudonejudul['penulis'];
+                                                        if($num >= 2) {
+                                                            echo ", ";
+                                                            $num--;
+                                                        }
+                                                    } ?>
+                                            </div>
+                                        </div>
+                                        <?php if($nom <= 4) { ?>
+                                            <div id="lines"></div>
+                                        <?php } ?>
+                                        <?php if($nom == 5) { ?>
+                                            <div id="liness"></div>
+                                            <div id="liness"></div>
+                                            <div id="liness"></div>
+                                            <div id="liness"></div>
+                                            <div id="liness"></div>
+                                            <div id="liness"></div>
+                                            <div id="liness"></div>
+                                            <div id="liness"></div>
+                                            <div id="liness"></div>
+                                        <?php } ?>
+                                        <?php if($nom >= 6) { ?>
+                                            <div id="lines"></div>
+                                        <?php } ?>
+                            <?php $nom++; } ?>
                         </div>
                     </div>
                 </div>
@@ -217,6 +384,46 @@ require '../conn.php';
         </div>
     </div>
 
+    <?php if($diss == "Review") { ?>
+        <script>
+            document.getElementById('anreview').style.display = "grid";
+        </script>
+    <?php }?>
+    <?php if($diss == "Meet") { ?>
+        <script>
+            document.getElementById('anmeet').style.display = "grid";
+        </script>
+    <?php }?>
+    <?php if($diss == "MoU") { ?>
+        <script>
+            document.getElementById('anmou').style.display = "grid";
+        </script>
+    <?php }?>
+    <?php if($diss == "Editing & Layouting") { ?>
+        <script>
+            document.getElementById('anedit').style.display = "grid";
+        </script>
+    <?php }?>
+    <?php if($diss == "Pendaftaran ISBN") { ?>
+        <script>
+            document.getElementById('anisbn').style.display = "grid";
+        </script>
+    <?php }?>
+    <?php if($diss == "Produksi") { ?>
+        <script>
+            document.getElementById('anproduksi').style.display = "grid";
+        </script>
+    <?php }?>
+    <?php if($diss == "Publish") { ?>
+        <script>
+            document.getElementById('andone').style.display = "grid";
+        </script>
+    <?php }?>
+    <?php if($diss == "Rejected") { ?>
+        <script>
+            document.getElementById('anrej').style.display = "grid";
+        </script>
+    <?php }?>
     <script src="script.js"></script>
 </body>
 </html>

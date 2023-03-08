@@ -307,6 +307,33 @@
   background-color: white;
   border-radius: 15px;
   box-shadow: 2px 2px 0px #9d9d9d;
+  display: grid;
+}
+.content .child .child-dash .notif .indikator #boxindikatr {
+  width: 90%;
+  height: 90%;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.content .child .child-dash .notif .indikator #boxindikatr #dsreview {
+  border-right: 1px solid #0054a3;
+  box-sizing: border-box;
+}
+.content .child .child-dash .notif .indikator #boxindikatr #dsreview #icon {
+  background-image: url("../assets/bookdsb.png");
+  background-repeat: no-repeat;
+
+  object-fit: cover;
+}
+.content .child .child-dash .notif .indikator #boxindikatr #dsproses {
+  border-right: 1px solid #0054a3;
+  box-sizing: border-box;
+}
+.content .child .child-dash .notif .indikator #boxindikatr #dsdone {
+  border-right: 1px solid #0054a3;
+  box-sizing: border-box;
 }
 .content .child .child-dash .notif .none {
   box-sizing: border-box;

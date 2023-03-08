@@ -54,6 +54,19 @@
   background-color: white;
   border-radius: 15px;
   box-shadow: 2px 2px 0px #9d9d9d;
+  display: grid;
+  align-items: center;
+  padding: 10px;
+}
+#child-status #bar #barjudul #barbar {
+  color: #0054a3;
+  outline: none;
+  scroll-behavior: smooth;
+  border: none;
+  padding: 7px;
+  font-size: medium;
+  font-weight: bold;
+  height: 100%;
 }
 #child-status #bar #riwayat {
   height: 100px;
@@ -80,6 +93,193 @@
   background-color: white;
   border-radius: 15px;
   box-shadow: 2px 2px 0px #9d9d9d;
+  background-image: url(../assets/bookystatus.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 15%;
+  display: grid;
+}
+#child-status #anime #animasi #anreview {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  display: none;
+  grid-template-rows: 2fr 1fr;
+}
+#child-status #anime #animasi #anreview #rev {
+  color: #0054a3;
+  font-weight: bold;
+  font-size: medium;
+  justify-self: center;
+  display: grid;
+  justify-items: center;
+  align-self: flex-start;
+}
+#child-status #anime #animasi #anmeet {
+  width: 80%;
+  height: 80%;
+  display: grid;
+  display: none;
+  grid-template-rows: 0.7fr 2fr 1fr;
+  align-self: center;
+  justify-self: center;
+  color: #0054a3;
+  font-size: small;
+}
+#child-status #anime #animasi #anmeet #meetone {
+  font-weight: bold;
+  font-size: medium;
+  align-self: center;
+}
+#child-status #anime #animasi #anmeet #meettwo {
+  font-size: medium;
+  align-self: flex-start;
+}
+#child-status #anime #animasi #anmeet #meettwo #meetlist {
+  display: grid;
+  grid-template-columns: 1fr 15px 4fr;
+  row-gap: 25px;
+  margin-top: 25px;
+}
+#child-status #anime #animasi #anmeet #meetthree {
+  font-size: medium;
+  padding-right: 25px;
+}
+#child-status #anime #animasi #anmou {
+  display: grid;
+  display: none;
+  height: 90%;
+  width: 90%;
+  grid-template-rows: 1fr 1fr;
+  justify-self: center;
+  align-self: center;
+}
+#child-status #anime #animasi #anmou #ppp {
+  margin: 0px auto 25px;
+}
+#child-status #anime #animasi #anmou #isimou {
+  display: grid;
+}
+#child-status #anime #animasi #anmou #mouupload {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+#child-status #anime #animasi #anmou #dropcontainer {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  height: 100%;
+  width: 55%;
+  justify-self: center;
+  border-radius: 10px;
+  border: 1px dashed #555;
+  color: #0054a3;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+#child-status #anime #animasi #anmou #dropcontainer:hover {
+  background: #eee;
+  border-color: #0054a3;
+}
+#child-status #anime #animasi #anmou #dropcontainer:hover #drop-itle {
+  color: #0054a3;
+}
+#child-status #anime #animasi #anmou #droptitle {
+  color: #0054a3;
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.2s ease-in-out;
+}
+#child-status #anime #animasi #anmou #send {
+  width: 50px;
+  height: 30px;
+  margin-right: 13%;
+  justify-self: end;
+  color: white;
+  font-weight: bold;
+  background-color: #0054a3;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  align-self: center;
+}
+#child-status #anime #animasi #anmou #send:hover {
+  box-shadow: 1px 1px 0px rgb(85, 85, 85);
+}
+#child-status #anime #animasi #anedit {
+  height: 80%;
+  width: 80%;
+  align-self: flex-end;
+  justify-self: center;
+  display: grid;
+  display: none;
+}
+#child-status #anime #animasi #informasi {
+  color: #0054a3;
+  font-size: small;
+  font-weight: bold;
+  margin-top: 10%;
+  justify-self: center;
+  justify-items: center;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+#child-status #anime #animasi #anedit p {
+  justify-self: center;
+  align-self: flex-start;
+}
+#child-status #anime #animasi #anisbn {
+  height: 80%;
+  width: 80%;
+  align-self: flex-end;
+  justify-self: center;
+  display: grid;
+  display: none;
+}
+#child-status #anime #animasi #anproduksi {
+  display: grid;
+  display: none;
+  height: 80%;
+  width: 80%;
+  align-self: center;
+  justify-self: center;
+}
+#child-status #anime #animasi #informasi {
+  align-self: flex-end;
+}
+#child-status #anime #animasi #andone {
+  display: grid;
+  display: none;
+  height: 80%;
+  width: 80%;
+  align-self: center;
+  justify-self: center;
+  grid-template-rows: 2fr 1fr;
+}
+#child-status #anime #animasi #anrej {
+  display: grid;
+  display: none;
+  height: 80%;
+  width: 80%;
+  align-self: center;
+  justify-self: center;
+  grid-template-rows: 3fr 1fr 1fr;
+}
+#child-status #anime #animasi #anrej #icon {
+  background-image: url(../assets/sorry.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  size: 100%;
+}
+#child-status #anime #animasi #anrej #text {
+  color: #0054a3;
+  font-size: medium;
+  justify-self: center;
+  align-self: center;
 }
 
 #child-naskah {
@@ -103,7 +303,7 @@
   display: grid;
   grid-template-rows: 1fr 10fr;
 }
-#child-naskah #buku #boke{
+#child-naskah #buku #boke {
   width: 95%;
   height: 95%;
   justify-self: center;
@@ -112,7 +312,7 @@
   grid-template-columns: 1fr repeat(4, 1px 1fr);
   grid-template-rows: 1fr 25px 1fr;
 }
-#child-naskah #buku #boke #boxbook{
+#child-naskah #buku #boke #boxbook {
   width: 150px;
   height: 270px;
   display: grid;
@@ -120,31 +320,31 @@
   row-gap: 3px;
   justify-self: center;
 }
-#child-naskah #buku #boke #boxbook img{
+#child-naskah #buku #boke #boxbook img {
   width: 100%;
   border-radius: 10px;
   cursor: pointer;
   align-self: center;
 }
-#child-naskah #buku #boke #boxbook #bookjudul{
+#child-naskah #buku #boke #boxbook #bookjudul {
   font-size: small;
   font-weight: bold;
 }
-#child-naskah #buku #boke #boxbook #bookpenulis{
+#child-naskah #buku #boke #boxbook #bookpenulis {
   font-size: small;
 }
-#child-naskah #buku #boke #lines{
+#child-naskah #buku #boke #lines {
   box-sizing: border-box;
   border-right: 1px solid #9d9d9d;
   height: 75%;
 }
-#child-naskah #buku #boke #liness{
+#child-naskah #buku #boke #liness {
   box-sizing: border-box;
   border-top: 1px solid #9d9d9d;
   width: 100%;
   align-self: center;
 }
-#child-naskah #buku #kate{
+#child-naskah #buku #kate {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: auto 1fr 150px;
@@ -152,32 +352,32 @@
   column-gap: 15px;
   justify-self: center;
 }
-#child-naskah #buku #kate #kates{
+#child-naskah #buku #kate #kates {
   font-weight: bold;
   font-size: medium;
   color: #0054a3;
   align-self: center;
   justify-self: flex-start;
 }
-#child-naskah #buku #kate #liness{
+#child-naskah #buku #kate #liness {
   box-sizing: border-box;
   border-top: 1px solid #9d9d9d;
   width: 100%;
   align-self: center;
 }
-#child-naskah #buku #kate #next{
+#child-naskah #buku #kate #next {
   display: grid;
   grid-template-columns: 30px auto 30px;
 }
-#child-naskah #buku #kate #next #pref{
+#child-naskah #buku #kate #next #pref {
   align-self: center;
   justify-self: center;
 }
-#child-naskah #buku #kate #next #nom{
+#child-naskah #buku #kate #next #nom {
   align-self: center;
   justify-self: center;
 }
-#child-naskah #buku #kate #next #nex{
+#child-naskah #buku #kate #next #nex {
   align-self: center;
   justify-self: center;
 }
@@ -254,14 +454,26 @@
   #child-status {
     grid-template-columns: 250px 1fr;
   }
+  #child-status #anime #animasi #anmeet #meetone {
+    font-size: small;
+  }
+  #child-status #anime #animasi #anmeet #meettwo {
+    font-size: small;
+  }
+  #child-status #anime #animasi #anmeet #meetthree {
+    font-size: small;
+  }
+  #child-status #bar #barjudul #barbar {
+    font-size: small;
+  }
   #child-naskah {
     grid-template-columns: 200px 1fr;
   }
-  #child-naskah #buku #boke #boxbook{
+  #child-naskah #buku #boke #boxbook {
     width: 130px;
     height: 190px;
   }
-  #child-naskah #buku #boke #boxbook img{
+  #child-naskah #buku #boke #boxbook img {
     border-radius: 8px;
   }
   #child-guidelines #struktur #logo {
@@ -280,4 +492,30 @@
   #child-guidelines #isi #h1 {
     font-size: medium;
   }
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+input[type="file"] {
+  max-width: 70%;
+  color: #0054a3;
+  padding: 2px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #0054a3;
+}
+input[type="file"]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #0054a3;
+  padding: 5px 10px;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+input[type="file"]::file-selector-button:hover {
+  background: #0054a3;
 }

@@ -281,3 +281,94 @@ function sssix() {
   ifive.style.display = "none";
   isix.style.display = "block";
 }
+
+var anreview = document.getElementById("anreview");
+var anmeet = document.getElementById("anmeet");
+var anmou = document.getElementById("anmou");
+var anedit = document.getElementById("anedit");
+var anisbn = document.getElementById("anisbn");
+var anproduksi = document.getElementById("anproduksi");
+var andone = document.getElementById("andone");
+function seljud() {
+  var selectedValue = barbar.options[barbar.selectedIndex].value;
+  if (selectedValue == "Review") {
+    anreview.style.display = "grid";
+    anmeet.style.display = "none";
+    anmou.style.display = "none";
+    anedit.style.display = "none";
+    anisbn.style.display = "none";
+    anproduksi.style.display = "none";
+    andone.style.display = "none";
+    anrej.style.display = "none";
+  }
+  if (selectedValue == "Meet") {
+    anreview.style.display = "none";
+    anmeet.style.display = "grid";
+    anmou.style.display = "none";
+    anedit.style.display = "none";
+    anisbn.style.display = "none";
+    anproduksi.style.display = "none";
+    andone.style.display = "none";
+    anrej.style.display = "none";
+  }
+  if (selectedValue == "MoU") {
+    anreview.style.display = "none";
+    anmeet.style.display = "none";
+    anmou.style.display = "grid";
+    anedit.style.display = "none";
+    anisbn.style.display = "none";
+    anproduksi.style.display = "none";
+    andone.style.display = "none";
+    anrej.style.display = "none";
+  }
+  if (selectedValue == "Editing & Layouting") {
+    anreview.style.display = "none";
+    anmeet.style.display = "none";
+    anmou.style.display = "none";
+    anedit.style.display = "grid";
+    anisbn.style.display = "none";
+    anproduksi.style.display = "none";
+    andone.style.display = "none";
+    anrej.style.display = "none";
+  }
+  if (selectedValue == "Pendaftaran ISBN") {
+    anreview.style.display = "none";
+    anmeet.style.display = "none";
+    anmou.style.display = "none";
+    anedit.style.display = "none";
+    anisbn.style.display = "grid";
+    anproduksi.style.display = "none";
+    andone.style.display = "none";
+    anrej.style.display = "none";
+  }
+  if (selectedValue == "Produksi") {
+    anreview.style.display = "none";
+    anmeet.style.display = "none";
+    anmou.style.display = "none";
+    anedit.style.display = "none";
+    anisbn.style.display = "none";
+    anproduksi.style.display = "grid";
+    andone.style.display = "none";
+    anrej.style.display = "none";
+  }
+  if (selectedValue == "Publish") {
+    anreview.style.display = "none";
+    anmeet.style.display = "none";
+    anmou.style.display = "none";
+    anedit.style.display = "none";
+    anisbn.style.display = "none";
+    anproduksi.style.display = "none";
+    andone.style.display = "grid";
+    anrej.style.display = "none";
+  }
+  if (selectedValue == "Rejected") {
+    anreview.style.display = "none";
+    anmeet.style.display = "none";
+    anmou.style.display = "none";
+    anedit.style.display = "none";
+    anisbn.style.display = "none";
+    anproduksi.style.display = "none";
+    andone.style.display = "none";
+    anrej.style.display = "grid";
+  }
+}
